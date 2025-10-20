@@ -138,8 +138,9 @@ Conclusion: This research opens new avenues for future investigation in AI syste
       </div>
 
       {analysis && (
-        <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/30 animate-fade-in">
-          <h3 className="text-lg font-semibold mb-4 gradient-text">
+        <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/30 animate-slide-up hover-lift">
+          <h3 className="text-lg font-semibold mb-4 gradient-text flex items-center gap-2">
+            <FileText className="w-5 h-5 animate-pulse" />
             AI Analysis of PDF
           </h3>
           <div className="prose prose-invert max-w-none">

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Search, Loader2 } from "lucide-react";
+import { Search, Loader2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
@@ -96,8 +96,9 @@ export const ResearchQuery = () => {
       </div>
 
       {answer && (
-        <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/30 animate-fade-in">
-          <h3 className="text-lg font-semibold mb-4 gradient-text">
+        <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/30 animate-slide-up hover-lift">
+          <h3 className="text-lg font-semibold mb-4 gradient-text flex items-center gap-2">
+            <Sparkles className="w-5 h-5 animate-pulse" />
             AI Summary & Insights
           </h3>
           <div className="prose prose-invert max-w-none">
