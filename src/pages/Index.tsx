@@ -3,7 +3,7 @@ import { ResearchQuery } from "@/components/ResearchQuery";
 import { ResearchChatbot } from "@/components/ResearchChatbot";
 import { PDFAnalyzer } from "@/components/PDFAnalyzer";
 import { Brain, Search, MessageSquare, FileText, Sparkles } from "lucide-react";
-import papermindLogo from "@/assets/papermind.jpg";
+import { Logo } from "@/components/Logo";
 
 const Index = () => {
   return (
@@ -26,11 +26,7 @@ const Index = () => {
         <div className="text-center mb-12 animate-slide-up">
           {/* Logo and Badge */}
           <div className="flex items-center justify-center gap-4 mb-6">
-            <img 
-              src={papermindLogo} 
-              alt="PaperMind Logo" 
-              className="w-16 h-16 md:w-20 md:h-20 object-contain animate-float hover:scale-110 transition-transform cursor-pointer"
-            />
+            <Logo />
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-primary/30 backdrop-blur-sm hover-lift">
               <Sparkles className="w-4 h-4 text-accent animate-pulse" />
               <span className="text-sm text-muted-foreground">Powered by Advanced AI</span>
