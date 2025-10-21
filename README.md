@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# PaperMind AI Research Assistant
 
 ## Project info
 
