@@ -119,7 +119,7 @@ export const ResearchChatbot = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
-          placeholder="Ask a research question..."
+          placeholder="Ask about research gaps, future directions, or summarize findings..."
           className="bg-secondary/50 border-primary/30 focus:border-primary"
           disabled={isLoading}
         />

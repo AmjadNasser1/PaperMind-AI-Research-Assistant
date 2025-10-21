@@ -73,7 +73,7 @@ export const ResearchQuery = () => {
         <Textarea
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="e.g., Recent trends in reinforcement learning for robotics"
+          placeholder="e.g., What are the current knowledge gaps in deep learning for medical imaging? What future research directions are most promising?"
           className="min-h-[100px] bg-secondary/50 border-primary/30 focus:border-primary"
         />
         <Button

@@ -2,7 +2,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ResearchQuery } from "@/components/ResearchQuery";
 import { ResearchChatbot } from "@/components/ResearchChatbot";
 import { PDFAnalyzer } from "@/components/PDFAnalyzer";
-import { Brain, Search, MessageSquare, FileText, Sparkles } from "lucide-react";
+import { ArxivSearch } from "@/components/ArxivSearch";
+import { Brain, Search, MessageSquare, FileText, Sparkles, BookOpen } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 const Index = () => {
@@ -39,14 +40,18 @@ const Index = () => {
           </h1>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-up stagger-1">
-            Advanced research analysis powered by neural networks. Read papers, identify gaps,
-            and discover future research directions.
+            Advanced AI research assistant. Fetch ArXiv papers, analyze PDFs, identify knowledge gaps,
+            and discover future research directions in AI and machine learning.
           </p>
         </div>
 
         {/* Main Interface */}
-        <Tabs defaultValue="query" className="w-full animate-slide-up stagger-2">
-          <TabsList className="grid w-full grid-cols-3 mb-8 bg-secondary/50 backdrop-blur-sm border border-primary/30 hover-lift">
+        <Tabs defaultValue="arxiv" className="w-full animate-slide-up stagger-2">
+          <TabsList className="grid w-full grid-cols-4 mb-8 bg-secondary/50 backdrop-blur-sm border border-primary/30 hover-lift">
+            <TabsTrigger value="arxiv" className="data-[state=active]:bg-primary/20 transition-all duration-300">
+              <BookOpen className="w-4 h-4 mr-2" />
+              ArXiv Papers
+            </TabsTrigger>
             <TabsTrigger value="query" className="data-[state=active]:bg-primary/20 transition-all duration-300">
               <Search className="w-4 h-4 mr-2" />
               Research Query
@@ -60,6 +65,12 @@ const Index = () => {
               PDF Analyzer
             </TabsTrigger>
           </TabsList>
+
+          <TabsContent value="arxiv" className="space-y-6">
+            <div className="animate-slide-up">
+              <ArxivSearch />
+            </div>
+          </TabsContent>
 
           <TabsContent value="query" className="space-y-6">
             <div className="p-6 rounded-xl bg-card/30 backdrop-blur-sm border border-primary/20 hover-lift animate-slide-up">

@@ -1,1 +1,10 @@
 project_id = "ozdjminbovbrjgpiaadv"
+
+[functions.analyze-pdf]
+verify_jwt = false
+
+[functions.research-chat]
+verify_jwt = false
+
+[functions.fetch-arxiv]
+verify_jwt = false
